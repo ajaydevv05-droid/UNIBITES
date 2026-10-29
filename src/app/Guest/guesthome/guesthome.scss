@@ -463,3 +463,251 @@ font-size:42px;
     left:125%;
 
 }
+
+/* Premium Explore Menu Button */
+
+.explore-btn {
+  background: linear-gradient(135deg, #ff8a00, #f4511e);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  cursor: pointer;
+
+  box-shadow: 0 6px 18px rgba(244, 81, 30, 0.25);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+/* Hover Effect */
+
+.explore-btn:hover {
+  background: linear-gradient(135deg, #f4511e, #d84315);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(244, 81, 30, 0.35);
+}
+
+/* Click Effect */
+
+.explore-btn:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 3px 8px rgba(244, 81, 30, 0.2);
+}
+
+/* Keyboard Accessibility */
+
+.explore-btn:focus-visible {
+  outline: 3px solid #ffbd80;
+  outline-offset: 4px;
+}
+
+/* Login button inside popup */
+.popup-login-btn {
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 10px;
+
+  background: linear-gradient(135deg, #ff8a00, #f4511e);
+  color: #ffffff;
+
+  border: none;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  box-shadow: 0 6px 18px rgba(244, 81, 30, 0.25);
+  transition: all 0.3s ease;
+}
+
+.popup-login-btn:hover {
+  background: linear-gradient(135deg, #f4511e, #d84315);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(244, 81, 30, 0.35);
+}
+
+/* Register button inside popup */
+.popup-register-btn {
+  width: 100%;
+  padding: 14px 20px;
+  margin-top: 12px;
+
+  background: #ffffff;
+  color: #17243a;
+
+  border: 1.5px solid #e1e6ed;
+  border-radius: 12px;
+
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+
+.popup-register-btn:hover {
+  background: #fff5ed;
+  color: #f4511e;
+  border-color: #f4511e;
+  transform: translateY(-2px);
+}
+
+/* Button click effect */
+.popup-login-btn:active,
+.popup-register-btn:active {
+  transform: scale(0.98);
+}
+
+/* UNIBITES LOGIN / REGISTER POPUP */
+
+.auth-overlay {
+  position: fixed !important;
+  inset: 0;
+  z-index: 999999 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+}
+
+.auth-popup {
+  position: relative;
+  width: 100%;
+  max-width: 430px;
+  padding: 35px 30px;
+  background: #fff;
+  border-radius: 22px;
+  text-align: center;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+  animation: popupShow 0.3s ease-out;
+}
+
+.popup-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  border: none;
+  background: transparent;
+  color: #17243a;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.popup-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff0e5;
+  border-radius: 20px;
+}
+
+.popup-icon span {
+  font-size: 36px;
+}
+
+.popup-eyebrow {
+  color: #f4511e;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.auth-popup h2 {
+  color: #17243a;
+  font-size: 28px;
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 12px 0;
+}
+
+.auth-popup h2 span {
+  color: #f4511e;
+}
+
+.popup-description {
+  color: #687386;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-bottom: 22px;
+}
+
+.popup-login-btn,
+.popup-register-btn {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.popup-login-btn {
+  border: none;
+  color: #fff;
+  background: linear-gradient(135deg, #ff8a00, #f4511e);
+  box-shadow: 0 6px 18px rgba(244, 81, 30, 0.25);
+}
+
+.popup-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(244, 81, 30, 0.35);
+}
+
+.popup-register-btn {
+  margin-top: 12px;
+  border: 1px solid #e1e6ed;
+  color: #17243a;
+  background: #fff;
+}
+
+.popup-register-btn:hover {
+  border-color: #f4511e;
+  color: #f4511e;
+  background: #fff5ed;
+}
+
+.popup-divider {
+  margin-top: 22px;
+  color: #9aa2af;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+@keyframes popupShow {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-popup {
+    padding: 32px 22px 25px;
+  }
+
+  .auth-popup h2 {
+    font-size: 24px;
+  }
+}
+
+
