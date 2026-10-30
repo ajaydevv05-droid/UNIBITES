@@ -42,7 +42,7 @@ export class Salesreport {
       return;
     }
 
-    this.http.post<any>('http://localhost:3000/salesreport', {
+    this.http.post<any>('http://https://unibites-1.onrender.com/salesreport', {
       from: this.fromDate,
       to: this.toDate
     }).subscribe({
