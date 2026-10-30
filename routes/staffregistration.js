@@ -49,9 +49,9 @@ router.post('/',(req, res, next) => {
           const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-              user: "ajaydevv05@gmail.com",
-              pass: "opfisadtbxhjwgvt" // use env variable in production
-            }
+                    user: process.env.EMAIL_USER || "ajaydevv05@gmail.com",
+                    pass: process.env.EMAIL_PASS
+                }
           });
 
           const mailOptions = {
