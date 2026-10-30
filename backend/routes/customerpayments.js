@@ -1,13 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql2');
-
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "unibites"
-});
+var con = require('../db');
 router.get('/', function (req, res) {
      let query = `SELECT 'Student' AS role, p.payment_id,st.student_name,st.student_email,p.amount,p.paymentdate,p.type,p.status
         FROM tbl_payment p

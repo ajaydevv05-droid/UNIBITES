@@ -1,12 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql2');
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "unibites"
-});
+var con = require('../db');
 router.post('/', (req, res, next) => {
     let foodName = req.body.food_name;
     let event_id = req.body.event_id;

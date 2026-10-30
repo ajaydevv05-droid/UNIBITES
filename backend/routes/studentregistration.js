@@ -1,15 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql2');
 var nodemailer = require('nodemailer');
-
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "unibites"
-});
-
+var con = require('../db');
 router.post('/', (req, res, next) => {
 
    let studentname = req.body.studentname;
@@ -54,9 +46,9 @@ router.post('/', (req, res, next) => {
           const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
-              user: "ajaydevv05@gmail.com",
-              pass: "opfisadtbxhjwgvt" // Use env variable in production
-            }
+                    user: process.env.EMAIL_USER || "ajaydevv05@gmail.com",
+                    pass: process.env.EMAIL_PASS
+                }
           });
 
           const mailOptions = {

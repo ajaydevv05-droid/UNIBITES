@@ -1,12 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql2');
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "unibites"
-})
+var con = require('../db');
 router.post('/', (req, res, next) => {
     let bookingmaster_id = req.body.bookingmaster_id;
     let query = `select * from tbl_bookingmaster m inner join tbl_login l on m.id=l.login_id where m.bookingmaster_id=${bookingmaster_id}`;
