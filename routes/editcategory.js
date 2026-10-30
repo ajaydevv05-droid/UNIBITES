@@ -1,12 +1,6 @@
 var express = require('express'); 
 var router = express.Router(); 
-var mysql = require('mysql2'); 
-var con = mysql.createConnection({ 
-    host: "localhost", 
-    user: "root", 
-    password: "", 
-    database: "unibites" 
-})
+var con = require('../db');
 router.post('/', (req, res, next) => { 
     var id = req.body.category_id; 
     let query = `select * from tbl_category where category_id='${id}'`; 

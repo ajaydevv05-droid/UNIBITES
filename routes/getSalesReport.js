@@ -1,14 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql2');
-
-var pool = mysql.createPool({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "unibites",
-    connectionLimit: 10
-});
+var con = require('../db');
 
 
 router.get('/', (req, res) => {

@@ -1,21 +1,8 @@
 var express = require('express'); 
 var router = express.Router(); 
-var mysql = require('mysql2'); 
+var con = require('../db');
 
-var con = mysql.createConnection({ 
-    host: "localhost", 
-    user: "root", 
-    password: "", 
-    database: "unibites" 
-});
 
-con.connect((err)=>{
-    if(err){
-        console.log("DB Connection Failed",err);
-    }else{
-        console.log("DB Connected");
-    }
-});
 
 
 /* ================= EVENT RESULTS (TOP 3 FOODS) ================= */

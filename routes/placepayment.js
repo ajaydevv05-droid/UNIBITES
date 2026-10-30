@@ -1,13 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var mysql = require('mysql2');
 var nodemailer=require('nodemailer');
-var con = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "unibites"
-});
+var con = require('../db');
 
 
 
